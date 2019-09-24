@@ -7,7 +7,7 @@
 
 ## Quick start
 
-- Clone the repo: `git clone https://github.com/Zeemzo/jigsaw-client.git`.
+- Clone the repo: `git clone https://github.com/Jigsaw-io/jigsaw-client.git`.
 - Enter Directory : `cd jigsaw-client`.
 - Install dependencies : `npm install`.
 - Run app: `npm run start`.
