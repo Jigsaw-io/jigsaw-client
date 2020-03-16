@@ -53,7 +53,47 @@ async function retrieveContributionTxnHashFromStellar(id) {
 
 
 async function proof(knowledgeID) {
-    
+    const knowledgeData = await retrieveKnowledgeFromJigsaw(knowledgeID)
+    const knowledgeHashFromStellar = await retrieveKnowledgeTxnHashFromStellar(knowledgeID)
+
+    if (knowledgeData != null && knowledgeHashFromStellar != null) {
+
+        //get the data from jigsaw ready to compare
+        //canonicalise
+        const canonicalized = stringify(knowledgeData)
+        //sha256 hash it
+        const knowledgeHash = sha256(canonicalized)
+        //compare it
+        if (knowledgeHash == knowledgeHashFromStellar) {
+            console.log("" + knowledgeHash)
+            console.log("" + knowledgeHashFromStellar)
+            console.log("Proof of Knowledge Existance Success!")
+        }
+    }
+
+
+    const constributionData = await retrieveContributionsFromJigsaw(knowledgeID)
+
+    constributionData.forEach(async (contribution) => {
+        const contributionHashFromStellar = await retrieveContributionTxnHashFromStellar(contribution.id)
+
+        if (contribution.data != null && contributionHashFromStellar != null) {
+
+            //get the data from jigsaw ready to compare
+            //canonicalise
+            const canonicalized = stringify(contribution.data)
+            //sha256 hash it
+            const contributionHash = sha256(canonicalized)
+            //compare it
+            if (contributionHash == contributionHashFromStellar) {
+                console.log("" + contributionHash)
+                console.log("" + contributionHashFromStellar)
+                console.log("Proof of Contribution Existance Success!")
+            }
+
+
+        }
+    })
 }
 
 
