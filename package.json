@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/crypto-js": "^3.1.43",
     "@types/stellar-sdk": "^0.10.4",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "canonicalize-json": "^1.0.2",
     "chart.js": "2.7.3",
     "classnames": "2.2.6",
