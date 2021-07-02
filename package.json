@@ -65,7 +65,7 @@
     "reactstrap": "7.1.0",
     "redux": "^4.0.4",
     "sha256": "^0.2.0",
-    "stellar-sdk": "^0.11.0",
+    "stellar-sdk": "^8.2.3",
     "tachyons-components": "^1.0.1",
     "text-diff": "^1.0.1"
   },
