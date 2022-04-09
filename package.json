@@ -32,7 +32,7 @@
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.11",
     "material-ui-icons": "^1.0.0-beta.36",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "node-sass": "4.11.0",
     "nouislider": "13.1.1",
     "perfect-scrollbar": "1.4.0",
